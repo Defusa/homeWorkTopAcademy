@@ -1,3 +1,0 @@
-D:/git/homeWorkTopAcademy/phoneBook/out/build/x64-debug/CMakeFiles/phoneBook.dir
-D:/git/homeWorkTopAcademy/phoneBook/out/build/x64-debug/CMakeFiles/edit_cache.dir
-D:/git/homeWorkTopAcademy/phoneBook/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
