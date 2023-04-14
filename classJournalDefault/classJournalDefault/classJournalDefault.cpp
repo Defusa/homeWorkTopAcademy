@@ -4,6 +4,7 @@
 #include "classJournal.h"
 #include "fileHelper.h"
 #include "consoleHelper.h"
+#include "marksMath.h"
 
 
 int main()
@@ -37,7 +38,7 @@ int main()
 	std::cout << "\n\n\n";
 
 	std::map < std::string, std::vector<int>> searchResult;
-	searchResult = searchByName(result, "Pers");
+	searchResult = searchByName(result, "Kartasheva");
 	if (searchResult.count("Error message")) {
 		std::cout << "Name not found" << std::endl;
 	}
@@ -47,9 +48,26 @@ int main()
 
 	std::cout << "\n\n\n";
 
+	double resultMark;
+	resultMark = averageMark(result, "Ivanov");
+	std::cout << resultMark;
+
+
+	std::cout << "\n\n\n";
+
 	std::vector<int> positions = {3,4,7};
 	DeleteStudentMarks(result, "Ivanov", positions);
 	ShowAll(result);
+
+	std::cout << "\n\n\n";
+
+
+	searchResult = searchByName(result, "Ivanov");
+	ShowOne(searchResult);
+	resultMark = averageMark(result, "Ivanov");
+	std::cout << "\t Average: " << resultMark;
+
+
 
 	ExportToFile("D:/git/homeWorkTopAcademy/classJournalDefault/classJournalDefault/classJournalResult.csv", result);
 
